@@ -54,6 +54,7 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+					
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -97,23 +98,73 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2 >inloggen gebruikers</h2>
                     <p>Log hier in voor uw resultaten en sportgegevens</p>
+					<?php
+						if ((isset($_SESSION['ingelogd'])) && ($_SESSION['ingelogd'] == true))
+						{
+							echo $_SESSION['klantcode']." is ingelogd";
+						}
+						else
+						{
+							echo "Nog niet ingelogd.";
+						}
+					?>
                     
                 </div>
             </div>
     </section>
+    
+    <?php
+        if (isset($_POST['Inloggen']))
+        {
+            mysql_connect('localhost','root','usbw');
+            mysql_select_db('sportschool')
+                
+				$Email = $_POST['email'];
+				$Wachtwoord = $_POST['wachtwoord']
+					
+					if (mysql_query("SELECT * FROM klanten;") == false)
+					{
+						echo mysql_error();
+					}
+					else
+					{			
+						$resultaat = mysql_query(SELECT 'Wachtwoord' FROM 'klanten' WHERE 'Email' = $Email);
+						$data = mysql_fetch_assoc($resultaat);		
+						$Wachtwoord = $data["wachtwoord"];
+						echo $Wachtwoord;
+
+							if ($wachtwoord==$Wachtwoord)
+							{
+								echo "U bent ingelogd";
+								session_start();
+								$_SESSION['ingelogd'] = true;
+								$_SESSION['Email'] = 'Email';
+								
+							}
+							else
+							{
+								echo "Er is iets fout gegaan tijdens met het inloggen.";
+							}
+							mysql_close();
+			}  
+        }
+    ?>
+    
     <section>
         <div class='login'>
-            <form name='login' action="index_submit" Method='get' accept-charset="utf-8">
+            <form method="post" action="">
                 <ul>
                     <label for='usermail'>email &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type='email' name='email' placeholder="jouwnaam@mail.nl" required>
+                    <input type='text' name='email' placeholder="jouwnaam@mail.nl" required>
                 </ul>
                 <ul>
                     <label for="password">Wachtwoord</label>
-                    <input type="wachtwoord" name="wachtwoord" placeholder="wachtwoord" required>
+                    <input type='password' name="password" placeholder="wachtwoord" required>
                 </ul>
                 <ul>
-                    <div class='login-btn'><a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">INLOGGEN</a></div>
+                    <div class='login-btn btn btn-default btn-lg'>
+                        <input type="submit" name="inloggen" value="Inloggen" />
+                    </div>
                 </ul>
             </form>
         </div>
