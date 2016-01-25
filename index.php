@@ -99,23 +99,74 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>inloggen gebruikers</h2>
                     <p>Log hier in voor uw resultaten en sportgegevens</p>
+                    <?php
+						//if ((isset($_SESSION['ingelogd'])) && ($_SESSION['ingelogd'] == true))
+						{
+							//echo $_SESSION['klantemail']." is ingelogd";
+						}
+						//else
+						{
+							//echo "Nog niet ingelogd.";
+						}
+					?>
                 </div>
             </div>
         
+        <p></p>
+   
     </section>
-    <section>
+     <section>
         <div class='login'>
-            <form name='login' action="index_submit" Method='get' accept-charset="utf-8">
+    <?php
+        session_start();
+		if (isset($_POST['submit']))
+		{			
+			mysql_connect("localhost","root","usbw") or die('error');
+			mysql_select_db("sportschool") or die('error');
+		
+			$k_email = $_POST['email'];
+			$wachtwoord = $_POST['wachtwoord'];
+			echo $k_email;
+			
+			if (mysql_query("SELECT * FROM klanten;") == false)
+			{
+				echo mysql_error();
+			}
+			else
+			{			
+				$resultaat = mysql_query("SELECT wachtwoord FROM klanten WHERE email='".$k_email."';");
+				$data = mysql_fetch_assoc($resultaat);
+				echo "<br />";
+				echo "<br />";			
+				$k_wachtwoord = $data["wachtwoord"];
+                
+				if ($wachtwoord==$k_wachtwoord)
+				{
+					echo "U bent ingelogd";
+                    echo '<br />';
+					$_SESSION['ingelogd'] = true;
+					$_SESSION['klantemail'] = $k_email;
+				}
+				else
+				{
+					echo "Er is iets fout gegaan tijdens met het inloggen.";
+				}
+				echo "<br />";
+				mysql_close();
+			}
+		}
+	?>
+            <form method="post" action="">
                 <ul>
-                    <label for='usermail'>email &nbsp;&nbsp;&nbsp;&nbsp;           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type='email' name='email' placeholder="jouwnaam@mail.nl" required>
+                    <label for='usermail'>email &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type='text' name='email' placeholder="jouwnaam@mail.nl" required>
                 </ul>
                 <ul>
                     <label for="password">Wachtwoord</label>
-                    <input type="wachtwoord" name="wachtwoord" placeholder="wachtwoord" required>
+                    <input type="password" name="wachtwoord" placeholder="wachtwoord" required>
                 </ul>
                 <ul>
-                    <div class='login-btn'><a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">INLOGGEN</a></div>
+                    <div class='login-btn btn btn-default btn-lg'><input name="submit" type="submit" value="Inloggen"></div>
                 </ul>
             </form>
         </div>
