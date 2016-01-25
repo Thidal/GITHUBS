@@ -103,17 +103,18 @@
     </section>
     <section>
         <div class='login'>
-            <form name='login' action="index_submit" Method='get' accept-charset="utf-8">
+            <form action="login.php" Method='post' accept-charset="utf-8">
                 <ul>
                     <label for='usermail'>email &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type='email' name='email' placeholder="jouwnaam@mail.nl" required>
+                    <input type='text' name='email' placeholder="jouwnaam@mail.nl" required>
                 </ul>
                 <ul>
                     <label for="password">Wachtwoord</label>
-                    <input type="wachtwoord" name="wachtwoord" placeholder="wachtwoord" required>
+                    <input type="password" name="wachtwoord" placeholder="wachtwoord" required>
                 </ul>
                 <ul>
-                    <div class='login-btn'><a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">INLOGGEN</a></div>
+                    <div class='login-btn btn btn-default btn-lg'><input name="submit" type="submit" value="Inloggen">
+                    </div>
                 </ul>
             </form>
         </div>
