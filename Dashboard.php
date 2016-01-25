@@ -82,7 +82,7 @@
                 <!-- /.row -->
                 <div class="row">
                 </div>
-                <p></p> Welkom op uw Profiel<p></p> 
+                <p></p> Hallo Rick Schoeman, welkom op uw profiel. Vanaf hier kun je je statistieken bekijken.<p></p> 
                 <!-- /.row -->
             </div>
             <!-- /.container-fluid -->
