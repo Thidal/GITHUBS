@@ -171,9 +171,13 @@ ul.alert-dropdown {
 .huge {
     font-size: 40px;
 }
-
+.panel-blue {
+    border-color: #54b5f2;
+    background-color: #54b5f2;
+}
 .panel-green {
     border-color: #5cb85c;
+    
 }
 
 .panel-green > .panel-heading {
