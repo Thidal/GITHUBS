@@ -99,16 +99,6 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>inloggen gebruikers</h2>
                     <p>Log hier in voor uw resultaten en sportgegevens</p>
-                    <?php
-						//if ((isset($_SESSION['ingelogd'])) && ($_SESSION['ingelogd'] == true))
-						{
-							//echo $_SESSION['klantemail']." is ingelogd";
-						}
-						//else
-						{
-							//echo "Nog niet ingelogd.";
-						}
-					?>
                 </div>
             </div>
         
@@ -118,9 +108,9 @@
      <section>
         <div class='login'>
     <?php
-        session_start();
 		if (isset($_POST['submit']))
 		{			
+            session_start();
 			mysql_connect("localhost","root","usbw") or die('error');
 			mysql_select_db("sportschool") or die('error');
 		

@@ -67,7 +67,56 @@
                     <div class="col-lg-8 col-md-offset-2">
                         <h1 class="brand-heading">Registreren</h1>
                         <p class="intro-text">Laat uw goede voornemens niet wachten.</p>
-                        </a>
+                            <?php
+                                if (isset($_POST['verzenden']))
+                                {			
+                                    mysql_connect("localhost","root","usbw");
+                                    mysql_select_db("sportschool");
+
+                                    $resultaat = mysql_query("SELECT MAX(ID) as maximum FROM klanten");
+                                    $data = mysql_fetch_assoc($resultaat);
+                                    $k_ID = $data["maximum"]+1;
+                                    $k_naam = $_POST['naam'];
+                                    $k_email = $_POST['email'];
+                                    $k_adres = $_POST['adres'];
+                                    $k_wachtwoord = $_POST['wachtwoord'];
+
+
+                                    $query = "INSERT INTO klanten(ID, Naam, Email, Adres, Wachtwoord) VALUES ('".$k_ID."', '".$k_naam."', '".$k_email."', '".$k_adres."', '".$k_wachtwoord."');";
+                                    if (mysql_query($query))
+                                    {
+                                        echo "De nieuwe gegevens zijn toegevoegd.";
+                                        echo "uw ID is: [$k_ID]";
+                                        echo "Log in met je email en wachtwoord";
+                                    }
+                                    else
+                                    {
+                                        echo $k_naam;
+                                        echo $k_ID; 
+                                        echo "Er is iets fout gegaan tijdens het toevoegen.";
+                                    }
+                                    echo "<br />";
+                                    mysql_close();
+
+                                }
+                            ?>
+                        <form method="post" action="">
+                            <div class='login'>
+                                <label>Naam:</label><br>
+                                <input type="text" name="naam" required><br>
+
+                                <label>Adres:</label><br>
+                                <input type="text" name="adres" required><br>
+
+                                <label>Email:</label><br>
+                                <input type="email" name="email" required><br>
+
+                                <label>Wachtwoord:</label><br>
+                                <input type="password" name="wachtwoord" required><br><br>
+
+                                <input type="submit" name="verzenden" value="Verzenden">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
