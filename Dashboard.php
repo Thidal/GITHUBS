@@ -87,10 +87,12 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="panel panel-blue">
-                            <p></p><b>&nbsp;Naam:</b>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Rick Schoeman<p></p>
-                            <p></p><b>&nbsp;Geslacht:</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Man<p></p>
-                            <p></p><b>&nbsp;Geboorte:</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  14-02-1998<p></p>
-                            <p></p><b>&nbsp;Woonplaats:</b>&nbsp;&nbsp;&nbsp;  Veenendaal<p></p>           
+                            <p></p><b>&nbsp;Naam:</b>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rick Schoeman<p></p>
+                            <p></p><b>&nbsp;Geslacht:</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Man<p></p>
+                            <p></p><b>&nbsp;Geboorte:</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  14-02-1998<p></p>
+                            <p></p><b>&nbsp;Woonplaats:</b>&nbsp;&nbsp;&nbsp;&nbsp;    Veenendaal<p></p>  
+                            <p></p><b>&nbsp;Abonnement:</b>&nbsp;&nbsp;          1 Jarig abonnement<p></p>
+                            <p></p><b>&nbsp;Lid vanaf:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     17-08-2015<p></p>
                         </div>
                     </div>
                 </div>
