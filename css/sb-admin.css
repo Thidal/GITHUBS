@@ -180,6 +180,26 @@ ul.alert-dropdown {
     border-color: #54b5f2;
     background-color: #54b5f2;
 }
+
+.panel-pink {
+    border-color: #ed68f2;
+    
+}
+
+.panel-pink > .panel-heading {
+    border-color: #ed68f2;
+    color: #fff;
+    background-color: #ed68f2;
+}
+
+.panel-pink > a {
+    color: #ed68f2;
+}
+
+.panel-pink > a:hover {
+    color: #c44cc9;
+
+}
 .panel-green {
     border-color: #5cb85c;
     

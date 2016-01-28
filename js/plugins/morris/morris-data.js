@@ -53,7 +53,59 @@ $(function() {
         hideHover: 'auto',
         resize: true
     });
+    
+     Morris.Area({
+        element: 'morris-area-chart2',
+        data: [{
+            period: '2015-10-10',
+            Kcal: 90,
+            
+        }, {
+            period: '2015-10-12',
+            Kcal: 60,
+            
+        }, {
+            period: '2015-10-13',
+            Kcal: 120,
+            
+        }, {
+            period: '2015-10-15',
+            Kcal: 95,
+            
+        }, {
+            period: '2015-10-19',
+            Kcal: 60,
+            
+        }, {
+            period: '2015-10-20',
+            Kcal: 100,
+            
+        }, {
+            period: '2015-10-21',
+            Kcal: 100,
+            
+        }, {
+            period: '2015-10-23',
+            Kcal: 180,
+            
+        }, {
+            period: '2015-10-24',
+            Kcal: 95,
+            
+        }, {
+            period: '2015-10-27',
+            Kcal: 120,
+            
+        }],
+        xkey: 'period',
+        ykeys: ['Kcal'],
+        labels: ['Kcal'],
+        pointSize: 2,
+        hideHover: 'auto',
+        resize: true
+    });
 
+    
     // Donut Chart
     Morris.Donut({
         element: 'morris-donut-chart',

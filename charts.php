@@ -110,6 +110,21 @@
                     </div>
                 </div>
                 <!-- /.row -->
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-pink">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i>Calorieën verbrand</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-area-chart2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
 
                 <div class="row">
                     <div class="col-lg-4">
