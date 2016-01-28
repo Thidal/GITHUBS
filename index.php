@@ -136,6 +136,7 @@
 				{
 					echo "U bent ingelogd";
                     echo '<br />';
+                    echo '<br />';
                     echo "<a href='".$link_adres."'>Klik hier voor uw Dashboard</a>";
                     echo '<br />';
 					$_SESSION['ingelogd'] = true;
@@ -187,9 +188,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Map Section -->
-    <div id="map"></div>
 
     <!-- Footer -->
     <footer>

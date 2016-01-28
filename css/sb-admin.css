@@ -17,6 +17,11 @@ body {
     }
 }
 
+.bakground-naam{
+    background-color: darkblue;
+    
+}
+
 #wrapper {
     padding-left: 0;
 }

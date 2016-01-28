@@ -55,13 +55,6 @@
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
                         <a href="Dashboard.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="charts.php"><i class="fa fa-fw fa-bar-chart-o"></i> Statistieken</a>
-                    </li>
-                    <li>
-                        <a href="tables.php"><i class="fa fa-fw fa-table"></i> Totale Resultaten</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -75,26 +68,36 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Dashboard <small>Profiel</small>
+                            Dashboard <small>Admin</small>
                         </h1>
                     </div>
                 </div>
-                <!-- /.row -->
                 <div class="row">
                 </div>
-                <p STYLE="font-size: 18pt;"> Welkom.</p><p></p> 
-                <!-- /.row -->
+                <p STYLE="font-size: 18pt;"> Welkom, Benno leen.</p><p></p> 
                 <div class="row">
-                    <div class="col-lg-3">
-                        <div class="panel panel-blue">
-                                <p></p><b>&nbsp;Naam:</b>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rick Schoeman<p></p>
-                                <p></p><b>&nbsp;Geslacht:</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Man<p></p>
-                                <p></p><b>&nbsp;Geboorte:</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  14-02-1998<p></p>
-                                <p></p><b>&nbsp;Woonplaats:</b>&nbsp;&nbsp;&nbsp;&nbsp;    Veenendaal<p></p>  
-                                <p></p><b>&nbsp;Abonnement:</b>&nbsp;&nbsp;          1-Jarig abonnement<p></p>
-                                <p></p><b>&nbsp;Lid vanaf:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     17-08-2015<p></p>
-                        </div>
-                    </div>
+                    <?php
+                            mysql_connect("localhost","root","usbw") or die('error');
+                            mysql_select_db("sportschool") or die('error');
+                        
+
+                            if (mysql_query("SELECT * FROM klanten;") == false)
+                                {
+                                    echo mysql_error('error');
+                                }
+                                else
+                                {			
+                                    $resultaat = mysql_query("SELECT * FROM klanten");
+                                    while($data = mysql_fetch_assoc($resultaat))
+                                    {
+                                        var_dump($data);
+                                        echo "</br></br>";
+                                    }
+                                    
+                                    
+                                }
+                                mysql_close();
+                    ?>
                 </div>
                 <!-- /.row -->
                 <div class="row">
