@@ -62,6 +62,9 @@
                     <li>
                         <a href="tables.php"><i class="fa fa-fw fa-table"></i> Totale Resultaten</a>
                     </li>
+                    <li>
+                        <a href="index.php"><i class="fa fa-fw fa-table"></i>Uitloggen</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
