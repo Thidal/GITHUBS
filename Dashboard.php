@@ -82,7 +82,24 @@
                 <!-- /.row -->
                 <div class="row">
                 </div>
-                <p></p> Hallo Rick Schoeman, welkom op uw profiel. Vanaf hier kun je je statistieken bekijken.<p></p> 
+                <p STYLE="font-size: 18pt;"> Welkom.</p><p></p> 
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="panel panel-blue">
+                            <p></p><b>&nbsp;Naam:</b>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rick Schoeman<p></p>
+                            <p></p><b>&nbsp;Geslacht:</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Man<p></p>
+                            <p></p><b>&nbsp;Geboorte:</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  14-02-1998<p></p>
+                            <p></p><b>&nbsp;Woonplaats:</b>&nbsp;&nbsp;&nbsp;&nbsp;    Veenendaal<p></p>  
+                            <p></p><b>&nbsp;Abonnement:</b>&nbsp;&nbsp;          1 Jarig abonnement<p></p>
+                            <p></p><b>&nbsp;Lid vanaf:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     17-08-2015<p></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    
+                </div>
                 <!-- /.row -->
             </div>
             <!-- /.container-fluid -->
