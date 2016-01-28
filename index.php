@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <?php
+    session_start();
+    ?>
 <head>
 
     <meta charset="utf-8">
@@ -110,10 +112,10 @@
     <?php
 		if (isset($_POST['submit']))
 		{			
-            session_start();
 			mysql_connect("localhost","root","usbw") or die('error');
 			mysql_select_db("sportschool") or die('error');
 		
+            $link_adres = 'Dashboard.php';
 			$k_email = $_POST['email'];
 			$wachtwoord = $_POST['wachtwoord'];
 			echo $k_email;
@@ -134,6 +136,8 @@
 				{
 					echo "U bent ingelogd";
                     echo '<br />';
+                    echo "<a href='".$link_adres."'>Klik hier voor uw Dashboard</a>";
+                    echo '<br />';
 					$_SESSION['ingelogd'] = true;
 					$_SESSION['klantemail'] = $k_email;
 				}
@@ -142,7 +146,6 @@
 					echo "Er is iets fout gegaan tijdens met het inloggen.";
 				}
 				echo "<br />";
-				mysql_close();
 			}
 		}
 	?>
